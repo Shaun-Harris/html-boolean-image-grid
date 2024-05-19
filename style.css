@@ -1,0 +1,137 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+/* header and hero styling */
+
+header {
+    height: fit-content;
+    width: 100%;
+    background-color:#000046 ;
+    position: fixed;
+    z-index: 1;
+}
+
+.hero {
+    display: grid;
+    background-image: url(assets/images/hero.jpg);
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+.title {
+    color: white;
+    background-color: rgba(0, 0, 0, 0.26);
+    text-align: center;
+    padding: 30px;
+    border-radius: 10px;
+    font-weight: 700;
+}
+
+header img {
+    height: 50px;
+}
+
+/* card styling */
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    justify-content: center;
+    align-content: center;
+    padding: 5rem 15rem;
+}
+
+.card {
+    border: 1px solid black;
+    border-radius: 10px;
+    width:300px;
+}
+
+.top img {
+    width: 100%;
+    border-radius: 10px 10px 0 0;
+}
+
+.top .boolean {
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    position:absolute;
+    right: 5px;
+    top: 10px;
+}
+
+.top {
+    position: relative;
+}
+
+.bottom {
+    display: grid;
+    grid-template: ".github twitter" 1rem "content . ." 1fr/1fr;
+    gap: 5px;
+    padding: 20px 10px 20px 10px;
+}
+
+.bottom p {
+    grid-area: content;
+    padding: 5px 15px;
+}
+
+.bottom img {
+    width: 32px;
+  
+}
+
+.bottom .github {
+    grid-area: github;
+ 
+}
+
+.bottom .twitter {
+    grid-area: twitter;
+    
+   
+}
+
+/* make responsive*/
+
+/* 
+   For screens with a maximum width of 1200px and above:
+   - The container will have a padding of 5rem on the top and bottom,
+     and 10rem on the left and right sides.
+*/
+@media screen and (max-width: 1200px) {
+    .container {
+        padding: 5rem 10rem 5rem 10rem; 
+    }
+}
+
+/* 
+   For screens with a maximum width of 768px and above, but less than 1200px:
+   - The container will have a padding of 5rem on the top and bottom,
+     and 3rem on the left and right sides.
+*/
+@media screen and (max-width: 768px) {
+    .container {
+        padding: 5rem 3rem 5rem 3rem; 
+    }
+}
+
+/* 
+   For screens with a maximum width of 480px and above, but less than 768px:
+   - The container will have a padding of 5rem on the top and bottom,
+     and 1rem on the left and right sides.
+*/
+@media screen and (max-width: 480px) {
+    .container {
+        padding: 5rem 1rem 5rem 1rem;
+    }
+}
